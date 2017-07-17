@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Virtual Library Management System</title>
+    <!--Bootstrap-->
+    <link href="~/Assert/Admin/libs/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="~/Assert/Admin/libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- NProgress -->
+    <link href="~/Assert/Admin/libs/nprogress/nprogress.css" rel="stylesheet" />
+    <!-- iCheck -->
+    <link href="~/Assert/Admin/libs/iCheck/skins/flat/green.css" rel="stylesheet" />
+     <!-- JQVMap -->
+    <link href="~/Assert/Admin/libs/jqvmap/dist/jqvmap.min.css" rel="stylesheet" />
+    <link href="~/Assert/Admin/libs/toastr/toastr.css" rel="stylesheet" />
+    <!-- bootstrap-datetimepicker -->
+    <link href="~/Assert/Admin/libs/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" />
+    <link href="~/Assert/Admin/libs/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+
+    <!-- Custom Theme Style -->
+    <link href="~/Assert/Admin/css/custom.min.css" rel="stylesheet" />
+    <style>.has-error{
+        color:red;
+    }
+    </style>
+</head>
+
+<body class="nav-md"  ng-app="VLMS">
+        <div class="container body">
+            <div class="main_container">
+                <div class="col-md-3 left_col">
+                    <div class="left_col scroll-view">
+                        <div class="navbar nav_title" style="border: 0;">
+                            <a href="index.html" class="site_title"><i class="fa fa-modx"></i> <span>Virtual Library</span></a>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                        <!-- menu profile quick info -->
+                        <div class="profile clearfix">
+                            <div class="profile_pic">
+                                <img src="~/Assert/Admin/img/img.jpg" alt="..." class="img-circle profile_img">
+                       
+                            </div>
+                            <div class="profile_info">
+                                <span>Welcome,</span>
+                                <h2>Le Viet Toan</h2>
+                            </div>
+                        </div>
+                        <!-- /menu profile quick info -->
+
+                        <br />
+
+                        <!-- sidebar menu -->
+                        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                            <div class="menu_section">
+                                <h3>Library Admin</h3>
+                                <ul class="nav side-menu">
+                                    <li>
+                                        <a ui-sref="libraryadmin"><i class="fa fa-home"></i> Library Information </a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a ui-sref="categories"><i class="fa fa-edit"></i> Category <span class="fa fa-chevron-down"></span></a>
+
+                                    </li>
+                                  
+                              
+                                    <li>
+                                        <a><i class="fa fa-clone"></i>Reserved Borrowing Items <span class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu">
+                                          
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a><i class="fa fa-bug"></i> Borrowing Items<span class="fa fa-chevron-down"></span></a>
+
+                                    </li>
+                                    <li>
+                                        <a><i class="fa fa-windows"></i> Search borrowing items <span class="fa fa-chevron-down"></span></a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                        <!-- /sidebar menu -->
+                   
+                    </div>
+                </div>
+
+                <!-- top navigation -->
+                <div class="top_nav">
+                    <div class="nav_menu">
+                        <nav>
+                            <div class="nav toggle">
+                                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                            </div>
+
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="">
+                                    <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                        <img src="~/Assert/Admin/img/img.jpg" alt="">Le Viet Toan
+                               
+                                        <span class="fa fa-angle-down"></span>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                        <li><a href="profile.html"><i class="fa fa-user-circle-o pull-right"></i> Profile</a></li>
+                                        <li><a href="../login.html"><i class="fa fa-sign-out pull-right"></i> Sign Out</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- /top navigation -->
+
+                <!-- page content -->
+               
+
+                <div class="right_col" role="main">
+                    <div ui-view>
+
+                    </div>
+                </div>
+                    <!-- footer content -->
+                    <footer>
+                        <div class="pull-right">
+                            ©2017 All Rights Reserved. Privacy and Terms
+                        </div>
+                        <div class="clearfix"></div>
+                    </footer>
+                </div>
+</div>
+
+    <!-- jQuery -->
+    <script src="~/Assert/Admin/libs/jquery/dist/jquery.js"></script>
+    <!-- Bootstrap -->
+    <script src="~/Assert/Admin/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="~/Assert/Admin/libs/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="~/Assert/Admin/libs/nprogress/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="~/Assert/Admin/libs/Chart.js/dist/Chart.min.js"></script>
+    <!-- gauge.js -->
+    <script src="~/Assert/Admin/libs/gauge.js/dist/gauge.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="~/Assert/Admin/libs/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="~/Assert/Admin/libs/iCheck/icheck.min.js"></script>
+    <!-- Skycons -->
+    <script src="~/Assert/Admin/libs/skycons/skycons.js"></script>
+    <!-- Flot -->
+    <script src="~/Assert/Admin/libs/Flot/jquery.flot.js"></script>
+    <script src="~/Assert/Admin/libs/Flot/jquery.flot.pie.js"></script>
+    <script src="~/Assert/Admin/libs/Flot/jquery.flot.time.js"></script>
+    <script src="~/Assert/Admin/libs/Flot/jquery.flot.stack.js"></script>
+    <script src="~/Assert/Admin/libs/Flot/jquery.flot.resize.js"></script>
+   
+    <!-- DateJS -->
+    <script src="~/Assert/Admin/libs/DateJS/build/date.js"></script>
+    <!-- JQVMap -->
+    <script src="~/Assert/Admin/libs/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="~/Assert/Admin/libs/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <script src="~/Assert/Admin/libs/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <!-- bootstrap-datetimepicker -->
+    <script src="~/Assert/Admin/libs/moment/min/moment.min.js"></script>
+    <script src="~/Assert/Admin/libs/bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="~/Assert/Admin/libs/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="~/Assert/Admin/libs/toastr/toastr.js"></script>
+    <!--angularjs-->
+    <script src="~/Assert/Admin/libs/angular/angular.js"></script>
+    <script src="~/Assert/Admin/libs/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="~/app/shared/module/VLMS.common.js"></script>
+    <script src="~/Assert/Admin/libs/bootbox/bootbox.js"></script>
+    <script src="~/app/shared/directives/pagerDirective.js"></script>
+    <script src="~/Assert/Admin/libs/ngBootbox/ngBootbox.js"></script>
+    <script src="~/app/shared/service/apiService.js"></script>
+    <script src="~/app/shared/service/notificationService.js"></script>
+
+    <script src="~/app/app.js"></script>
+    
+    <script src="~/app/components/home/homeController.js"></script>
+
+    <script src="~/app/components/item/item.module.js"></script>
+    <script src="~/app/components/item/itemListController.js"></script>
+    <script src="~/app/components/item/itemAddController.js"></script>
+    <script src="~/app/components/item/itemEditController.js"></script>
+
+    <script src="~/app/components/category/category.module.js"></script>
+    <script src="~/app/components/category/categoryAddController.js"></script>
+    <script src="~/app/components/category/categoryEditController.js"></script>
+    <script src="~/app/components/category/categoryListController.js"></script>
+    </body>
+</html>

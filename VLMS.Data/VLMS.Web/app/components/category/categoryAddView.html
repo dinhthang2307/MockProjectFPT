@@ -1,0 +1,30 @@
+﻿<form class="form-horizontal" novalidate name="frmAddCategory" role="form" ng-submit="AddCategory()">
+    <h1>Create new category</h1>
+    <div class="form-group">
+        <label>Tên cateory</label>
+        <input type="text" class="form-control" name="Name" placeholder="Tên category" required ng-model="category.Name">
+        <span ng-show="frmAddCategory.Name.$invalid" class="has-error">Phải nhập tên category</span>
+    </div>
+   
+    <div class="form-group">
+        <label>Mô tả ngắn</label>
+        <input type="text" class="form-control" placeholder="Mô tả ngắn" ng-model="category.Description">
+    </div>
+
+    <div class="form-group">
+        <label>Mã thư viện</label>
+        <input type="text" class="form-control" placeholder="Mã thư viện" ng-model="category.LibraryId">
+    </div>
+    <div class="form-group">
+        <label>Id người tạo</label>
+        <input type="text" class="form-control" required name="CreatedByUserId" placeholder="Id người tạo" ng-model="category.CreatedByUserId">
+        <span ng-show="frmAddCategory.CreatedByUserId.$invalid" class="has-error">Phải nhập id người tạo.</span>
+    </div>
+
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" ng-checked="category.IsActive"> Sẵn sàng
+        </label>
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+</form>

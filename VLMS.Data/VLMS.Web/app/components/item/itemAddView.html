@@ -1,0 +1,86 @@
+﻿<form class="form-horizontal" novalidate name="frmAddItem" role="form" ng-submit="AddItem()">
+    <h1>Create new item</h1>
+    <div class="form-group">
+        <label>Tên item</label>
+        <input type="text" class="form-control" name="Name" placeholder="Tên Item" required ng-model="item.Name">
+        <span ng-show="frmAddItem.Name.$invalid" class="has-error">Phải nhập tên danh mục</span>
+
+    </div>
+    <div class="form-group">
+        <label>Tên thư viện</label>
+        <input type="text" class="form-control" placeholder="Tên thư viện" ng-model="item.AdditionalName">
+    </div>
+    <div class="form-group">
+        <label>Mã sách</label>
+        <input type="text" class="form-control"  placeholder="Mã sách" ng-model="item.SerialNumber">
+    </div>
+
+    <div class="form-group">
+        <label>Mô tả ngắn</label>
+        <input type="text" class="form-control"  placeholder="Mô tả ngắn" ng-model="item.Description">
+    </div>
+
+    <div class="form-group">
+        <label>Mã nơi thêm - ManufactoryId</label>
+        <input type="text" class="form-control" placeholder="Nơi thêm" ng-model="item.ManufactoryId">
+    </div>
+
+    <div class="form-group">
+        <label>Mã quốc gia</label>
+        <input type="text" class="form-control" placeholder="Mã quốc gia" ng-model="item.MadeInCountry">
+    </div>
+
+
+    <div class="form-group">
+        <label>Mã quản thư</label>
+        <input type="text" class="form-control" placeholder="Mã quản thư" ng-model="item.ManagedByLibraryanId">
+    </div>
+
+
+    <div class="form-group">
+        <label>Mã thư viện</label>
+        <input type="text" class="form-control" placeholder="Mã thư viện" ng-model="item.LibraryId">
+    </div>
+
+    <div class="form-group">
+        <label>Mã người giao hàng</label>
+        <input type="text" class="form-control" placeholder="Mã người giao hàng" ng-model="item.ContributorId">
+    </div>
+
+
+    <div class="form-group">
+        <label>Ngày giao hàng</label>
+        <input type="text" class="form-control" placeholder="Ngày giao hàng" ng-model="item.ContributionDate">
+    </div>
+    <div class="form-group">
+        <label>Giá gốc</label>
+        <input type="text" class="form-control" placeholder="Giá gốc" ng-model="item.OriginalPrice">
+    </div>
+
+    <div class="form-group">
+        <label>Giá hiện tại</label>
+        <input type="text" class="form-control" placeholder="Giá hiện tại" ng-model="item.PresentValue">
+    </div>
+
+    <div class="form-group">
+        <label>Id người tạo</label>
+        <input type="text" class="form-control" required name="CreatedByUserId" placeholder="Id người tạo" ng-model="item.CreatedByUserId">
+        <span ng-show="frmAddItem.CreatedByUserId.$invalid" class="has-error">Phải nhập id người tạo.</span>
+
+    </div>
+
+
+    <div class="form-group">
+        <label>Mã trạng thái</label>
+        <input type="text" class="form-control" required name="StatusId" placeholder="Mã trạng thái" ng-model="item.StatusId">
+        <span ng-show="frmAddItem.StatusId.$invalid" class="has-error">Phải nhập mã trạng thái.</span>
+
+    </div>
+
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" ng-checked="item.IsActive"> Sẵn sàng
+        </label>
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+</form>

@@ -1,0 +1,71 @@
+﻿
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <label class="control-label col-md-1 col-sm-1 col-xs-1">Input</label>
+                    <div class="col-md-8 col-sm-8 col-xs-8">
+                        <input type="text" ng-model="keyWord" class="form-control col-md-6 col-xs-12" placeholder="Nhập từ khóa để tìm kiếm...">
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-3">
+                        <button type="button" class="btn btn-success" ng-click="search()">Search</button>
+                        <button type="button" class="btn btn-success" ui-sref="add_item">Create</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>List of Items</h2>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="tab-pane active" id="status">
+                    <p class="lead">Things</p>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-12 profile_left" ng-repeat="item in Item">
+                            <div class="profile_img">
+                                <div id="crop-avatar">
+                                    <!-- Current avatar -->
+                                  
+                                    <img src="../../../Assert/Admin/img/laptop.jpg" alt="Avatar" height="150" width="150">
+                                </div>
+                            </div>
+                            <h3>{{item.Name}}</h3>
+
+                            <ul class="list-unstyled user_data">
+                                <li>
+                                    <i class="fa fa-map-marker fa-check-circle"></i><font color="green"> Available</font>
+                                </li>
+
+                                <li>
+                                    <i class="fa fa-male user-profile-icon"></i> Serial Number:<a href=""> {{item.SerialNumber}}</a>
+                                </li>
+
+                                <li>
+                                    <i class="fa fa-calendar user-profile-icon"></i> Contribution date: {{item.CreatedDateTime}}
+                                </li>
+                            </ul>
+
+                            <a class="btn btn-success" ui-sref="edit_item({id:item.Id})"><i class="fa fa-edit m-right-xs"></i>&nbsp;Edit</a>
+                            <a class="btn btn-danger" ng-click="deleteItem(item.Id)"><i class="fa fa-trash m-right-xs"></i>&nbsp;Delete</a>
+
+                        </div>
+                       
+                    </div>
+                   
+                </div>
+
+                <div class="clearfix"></div>
+
+            </div>
+        </div>
+    </div>
+    <div>
+        <pager-directive page="{{page}}" custom-path="{{customPath}}" pages-count="{{pagesCount}}" total-count="{{totalCount}}"
+                         search-func="getItem(page)"></pager-directive>
+    </div>
+
+<!-- /page content -->
